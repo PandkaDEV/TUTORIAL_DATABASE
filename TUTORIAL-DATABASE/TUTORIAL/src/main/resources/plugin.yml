@@ -1,0 +1,5 @@
+name: DataBase
+version: ${project.version}
+main: pl.xpawelek.database.Main
+api-version: 1.16
+authors: [ xPawelek ]
