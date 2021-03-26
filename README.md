@@ -54,8 +54,8 @@ public Connection connection(){
  }
  
 #         EXAMPLE SEND TO SQL
-
-```public static void saveUser() {
+```
+public static void saveUser() {
         if (connection == null) return;
         try {
             Statement statement = connection.createStatement();
