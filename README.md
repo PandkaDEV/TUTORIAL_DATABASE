@@ -59,7 +59,7 @@ public static void saveUser() {
         if (connection == null) return;
         try {
             Statement statement = connection.createStatement();
-            for (User user : UserManager.getGetUser().values()) {
+            for (User user : UserManager.getUsers().values()) {
                 UserCache basicCache = user.getUserCache();
                 if(!basicCache.isStauts()) continue;
                 statement.executeUpdate(user.getSQL());
