@@ -23,16 +23,16 @@ public final class Main extends JavaPlugin {
     public void onLoad(){
         instance = this; // tworzymy nasza instancje podczas ladowania pluginu
         Logger.getAnonymousLogger().info("Trwa ladowanie pluginu...");
-        MySQL.getInstance().connect(); // laczymy sie z nasza baza danych
-        MySQL.getInstance().init();  // tworzymy tabele lub pobieramy dane z bazy aby stworzyc wczesniejszych graczy
-        new SaveTask().start();
-        PluginManager pluginManager = Bukkit.getServer().getPluginManager();
-        pluginManager.registerEvents(new PlayerJoinListeners(), this);
     }
 
     @Override
     public void onEnable() {
         Logger.getAnonymousLogger().info("Zaladowano nasz plugin");
+       MySQL.getInstance().connect(); // laczymy sie z nasza baza danych
+        MySQL.getInstance().init();  // tworzymy tabele lub pobieramy dane z bazy aby stworzyc wczesniejszych graczy
+        new SaveTask().start();
+        PluginManager pluginManager = Bukkit.getServer().getPluginManager();
+        pluginManager.registerEvents(new PlayerJoinListeners(), this);
 
     }
 
