@@ -14,6 +14,6 @@ public class SaveTask  implements Runnable{
     }
 
     public void start(){
-        Bukkit.getScheduler().runTaskTimerAsynchronously(Main.getInstance(), this, 20L, 1200L); // wywolujemy naszego asynchronicznego taska ktory jest optymalny
+        Bukkit.getScheduler().runTaskTimerAsynchronously(Main.getInstance(), this, 1L, 1200L); // wywolujemy naszego asynchronicznego taska ktory jest optymalny
     }
 }
